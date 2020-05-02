@@ -1,0 +1,500 @@
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                                    IMPORTS
+//? ------------------------------------------------------------------------------------------------------------------------------
+
+/*  ---------------------------------------------------IMPORTS-------------------------------------------------------------------- */
+/*                                                                                                                                 */
+/*  ------------------------------------------------------------------------------------------------------------------------------ */
+@import '_fonts';
+@import '_settings.scss';
+@import '_reset-styles.scss';
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                                  INFO IN CSS
+//? ------------------------------------------------------------------------------------------------------------------------------
+/*  -------------------------------------------------INFO IN CSS------------------------------------------------------------------ */
+/* version #{$version}                                                                                                             */
+/*  ------------------------------------------------------------------------------------------------------------------------------ */
+//* ------------------------------------------------------------------------------------------------------------------------------
+//* ------------------------------------------------------------------------------------------------------------------------------
+//* ------------------------------------------------------------------------------------------------------------------------------
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                                    STYLES
+//? ------------------------------------------------------------------------------------------------------------------------------
+/*  ---------------------------------------------------STYLES--------------------------------------------------------------------- */
+/*                                                                                                                                 */
+/*  ------------------------------------------------------------------------------------------------------------------------------ */
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                         Large screens min-width : 1824px
+//? ------------------------------------------------------------------------------------------------------------------------------
+
+.landing-page {
+    background-color: #ebebeb;
+
+    .bg-navbar {
+        height: 230px;
+        padding-top: 40px;
+
+        .nav {
+            .logo-search {
+                display: flex;
+                justify-content: space-between;
+
+                .search {
+                    display: flex;
+                    align-items: center;
+
+                    .search-logo {
+                        display: flex;
+                        align-items: center;
+
+                        .logo-text {
+                            text-shadow: 0 1px 0 #ffffff;
+                            color: #c7c7c7;
+                            color: #d5d5d5;
+                            font-family: Nexa;
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 71px;
+                            color: #c7c7c7;
+                            margin-right: 10px;
+                        }
+
+                        img {
+                            height: 12px;
+                            width: 8px;
+                        }
+
+                        &::after {
+                            content: '';
+                            width: 1px;
+                            height: 25px;
+                            box-shadow: 0 1px 0 #ffffff;
+                            background-color: #c7c7c7;
+                            background-color: #767676;
+                            margin-left: 15px;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    .select {
+
+                        position: relative;
+                        bottom: 1px;
+                        margin-right: 15px;
+
+                        select {
+                            text-shadow: 0 1px 0 #ffffff;
+                            color: #58159b;
+                            color: #ffffff;
+                            font-family: Nexa;
+                            font-size: 12px;
+                            font-weight: 700;
+                            color: #58159b;
+                            letter-spacing: 0.12px;
+
+                            option {
+                                text-shadow: 0 1px 0 #ffffff;
+                                color: #58159b;
+                                color: #ffffff;
+                                font-family: Nexa;
+                                font-size: 12px;
+                                font-weight: 700;
+                                color: #58159b;
+                                letter-spacing: 0.12px;
+                            }
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 4px;
+                            right: -15px;
+                            background-image: url(../../img/header/arrow.png);
+                            width: 8px;
+                            height: 14px;
+                        }
+
+                    }
+
+                    .find-input {
+                        margin-left: 20px;
+                        position: relative;
+
+                        input {
+                            width: 300px;
+                            padding: 0 40px 0 20px;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 12px;
+                            right: 10px;
+                            width: 23px;
+                            height: 23px;
+                            background-image: url(../../img/header/clock_.png);
+                        }
+                    }
+                }
+            }
+
+            .navbar {
+                width: 100%;
+                display: flex;
+                list-style-type: none;
+                position: relative;
+                top: 20px;
+                left: -20px;
+
+                .navbar-li {
+                    width: 165px;
+                    height: 110px;
+                    background-color: #ffffff;
+                    z-index: 1;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+                    // border-bottom: 5px solid #6017a3;
+                    background-image: linear-gradient(to top, #d7d7d7 0%, #ffffff 100%);
+                    position: relative;
+
+                    .navbar-li-line {
+                        height: inherit;
+                        width: inherit;
+
+                        &:first-child::before,
+                        &:first-child::after {
+                            content: none;
+                        }
+
+                        &::before,
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 1px;
+                            height: 110px;
+                            background-color: #d4d4d4;
+                        }
+
+                        &::before {
+                            left: 0;
+                        }
+
+                        &:after {
+                            top: 0;
+                            left: 100%;
+                        }
+
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            height: 100%;
+                            width: 100%;
+
+                            img {
+                                width: 25px;
+                                height: 25px;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                    }
+
+
+                    &:hover {
+                        transform: scale(1.1);
+                        background-color: #fff;
+                        background-image: none;
+                        z-index: 2;
+                    }
+
+
+                }
+            }
+
+        }
+    }
+
+    .bg-slider {
+        height: calc(100vh - 230px);
+        width: 100%;
+        background-image: url(../../img/header/Slider.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bg-travel-guide {
+        background-color: #2d2d2d;
+        overflow: hidden;
+
+        .travel-guide-map {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 400px;
+            user-select: none;
+            cursor: pointer;
+
+            .card {
+                position: relative;
+                z-index: 2;
+                // border-radius: 5px;
+                background-color: #dcd2e6;
+                width: calc(25% - 5px);
+                box-shadow: 0 0 0 5px #fff;
+                text-align: center;
+                font-size: 50px;
+                z-index: 1;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    transform: scale(.6);
+                }
+
+                &:nth-child(1) {
+                    left: 38%;
+                    z-index: 2;
+                    transform: rotateX(50deg) rotateY(-90deg) perspective(1100px) skew(-15deg, -15deg);
+
+                    img {
+                        position: absolute;
+                        left: -150%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    transform: rotateX(50deg) rotateY(90deg) perspective(1100px) skew(-15deg, 15deg);
+                    left: 13%;
+
+                    img {
+                        position: absolute;
+                        left: -260%;
+                    }
+                }
+
+                &:nth-child(3) {
+                    transform: rotateX(50deg) rotateY(-90deg) perspective(1100px) skew(-15deg, -15deg);
+                    right: 12%;
+
+                    img {
+                        position: absolute;
+                        left: -370%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    transform: rotateX(50deg) rotateY(90deg) perspective(1100px) skew(-15deg, 15deg);
+                    right: 37%;
+
+                    img {
+                        position: absolute;
+                        left: -485%;
+                    }
+                }
+            }
+
+            .map-1 {
+                left: 10px;
+            }
+
+            .here {
+                width: 45px;
+                height: 70px;
+                position: relative;
+                right: 290px;
+                top: 88px;
+                z-index: 2;
+                opacity: 0;
+
+                img:nth-child(2) {
+                    position: relative;
+                    right: 45px;
+                    bottom: 61px;
+                }
+            }
+        }
+    }
+
+    .bg-service {
+        background-color: #2d2d2d;
+
+        .service-blocks {
+            display: flex;
+
+            .service-block {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex: 1 1 33.3%;
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                    margin-bottom: 50px;
+                }
+
+                .h2 {
+                    color: #ffffff;
+                    font-family: "Nexa - Book";
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    /* Text style for "S, ave Tim" */
+                    letter-spacing: 0.6px;
+                    margin-bottom: 20px;
+                }
+
+                .describe {
+                    color: #ffffff;
+                    font-family: "Arial MT";
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    /* Text style for "Lets throw" */
+                    letter-spacing: 0.3px;
+                    padding: 0 15px 50px 15px;
+                }
+
+                &:nth-child(1)::after,
+                &:nth-child(2)::after {
+                    content: '';
+                    position: absolute;
+                    width: 140px;
+                    height: 3px;
+                    background-color: #6d6d6d;
+                    left: 78%;
+                    top: 35px;
+                }
+            }
+        }
+    }
+
+    .bg-sub-servive {
+        padding-top: 50px;
+        background-color: #222222;
+        position: relative;
+        height: 520px;
+        overflow: hidden;
+
+        .sub-service {
+            img {
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            .sub-services-text {
+                position: absolute;
+                top: 330px;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, 0);
+
+                .h2 {
+                    text-shadow: 0 1px 1px #000000;
+                    color: #ffffff;
+                    font-family: "Nexa - Book";
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    /* Text style for "A,  simple" */
+                    letter-spacing: 0.9px;
+                    margin-bottom: 25px;
+                }
+
+                .h5 {
+                    text-shadow: 0 1px 1px #000000;
+                    color: #a161db;
+                    font-family: Nexa;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    /* Text style for "W, e start" */
+                    letter-spacing: 0.35px;
+                }
+            }
+        }
+    }
+
+    .bg-about-the-tour-how-to {}
+
+    .bg-footer {}
+
+    //! ------------------------------------------------------------------------------------------------------------------------------
+    //!                                                  STYLES SETTINGS
+    //! ------------------------------------------------------------------------------------------------------------------------------
+    //? COLOR
+    .main-focus {
+        color: #a161db;
+    }
+
+    //? BLOCK
+    .container {
+        width: $container;
+        margin: 0 auto;
+    }
+
+    .mp {
+        padding: 50px 0;
+    }
+
+
+    //? ALIGN
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .col {
+        flex-direction: column;
+    }
+
+    //! ------------------------------------------------------------------------------------------------------------------------------
+    //!                                              END OF STYLES SETTINGS
+    //! ------------------------------------------------------------------------------------------------------------------------------
+}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                          iPads (Portrait and Landscaping)
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width : 1224px) {}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                          iPads (Portrait and Landscaping)
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                                iPads (Landscaping)
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                                  iPads (Portrait)
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                          Smartphones (portrait and landscape)
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                               Smartphones (landscape)
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width : 321px) {}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                               Smartphones (portrait)
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (max-width : 320px) {}
+
+//? ------------------------------------------------------------------------------------------------------------------------------
+//?                                                     iPhone 4
+//? ------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {}

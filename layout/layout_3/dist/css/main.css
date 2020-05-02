@@ -1,0 +1,482 @@
+/*  ---------------------------------------------------IMPORTS-------------------------------------------------------------------- */
+/*                                                                                                                                 */
+/*  ------------------------------------------------------------------------------------------------------------------------------ */
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic);
+@font-face {
+  font-family: 'Nexa Black';
+  src: url(../../fonts/Nexa-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url(../../fonts/Nexa-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Nexa - Book';
+  src: url(../../fonts/Nexa-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Arial MT';
+  src: url(../../fonts/ArialMT.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+select {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+input[type^=text] {
+  height: 46px;
+  box-shadow: 0 2px 5px 1px #a5a4a4;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+  font-family: Nexa;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -0.12px;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Nexa - Book";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.9px;
+}
+
+h6 {
+  font-family: Nexa;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.35px;
+}
+
+/*  -------------------------------------------------INFO IN CSS------------------------------------------------------------------ */
+/* version 1.0.0                                                                                                             */
+/*  ------------------------------------------------------------------------------------------------------------------------------ */
+/*  ---------------------------------------------------STYLES--------------------------------------------------------------------- */
+/*                                                                                                                                 */
+/*  ------------------------------------------------------------------------------------------------------------------------------ */
+.landing-page {
+  background-color: #ebebeb;
+}
+
+.landing-page .bg-navbar {
+  height: 230px;
+  padding-top: 40px;
+}
+
+.landing-page .bg-navbar .nav .logo-search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search {
+  display: flex;
+  align-items: center;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .search-logo {
+  display: flex;
+  align-items: center;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .search-logo .logo-text {
+  text-shadow: 0 1px 0 #ffffff;
+  color: #c7c7c7;
+  color: #d5d5d5;
+  font-family: Nexa;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 71px;
+  color: #c7c7c7;
+  margin-right: 10px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .search-logo img {
+  height: 12px;
+  width: 8px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .search-logo::after {
+  content: '';
+  width: 1px;
+  height: 25px;
+  box-shadow: 0 1px 0 #ffffff;
+  background-color: #c7c7c7;
+  background-color: #767676;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .select {
+  position: relative;
+  bottom: 1px;
+  margin-right: 15px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .select select {
+  text-shadow: 0 1px 0 #ffffff;
+  color: #58159b;
+  color: #ffffff;
+  font-family: Nexa;
+  font-size: 12px;
+  font-weight: 700;
+  color: #58159b;
+  letter-spacing: 0.12px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .select select option {
+  text-shadow: 0 1px 0 #ffffff;
+  color: #58159b;
+  color: #ffffff;
+  font-family: Nexa;
+  font-size: 12px;
+  font-weight: 700;
+  color: #58159b;
+  letter-spacing: 0.12px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .select:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -15px;
+  background-image: url(../../img/header/arrow.png);
+  width: 8px;
+  height: 14px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .find-input {
+  margin-left: 20px;
+  position: relative;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .find-input input {
+  width: 300px;
+  padding: 0 40px 0 20px;
+}
+
+.landing-page .bg-navbar .nav .logo-search .search .find-input::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../../img/header/clock_.png);
+}
+
+.landing-page .bg-navbar .nav .navbar {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  top: 20px;
+  left: -20px;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li {
+  width: 165px;
+  height: 110px;
+  background-color: #ffffff;
+  z-index: 1;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(to top, #d7d7d7 0%, #ffffff 100%);
+  position: relative;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line {
+  height: inherit;
+  width: inherit;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line:first-child::before, .landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line:first-child::after {
+  content: none;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line::before, .landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 110px;
+  background-color: #d4d4d4;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line::before {
+  left: 0;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line:after {
+  top: 0;
+  left: 100%;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li .navbar-li-line a img {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+.landing-page .bg-navbar .nav .navbar .navbar-li:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  background-image: none;
+  z-index: 2;
+}
+
+.landing-page .bg-slider {
+  height: calc(100vh - 230px);
+  width: 100%;
+  background-image: url(../../img/header/Slider.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.landing-page .bg-travel-guide {
+  background-color: #2d2d2d;
+  overflow: hidden;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 400px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card {
+  position: relative;
+  z-index: 2;
+  background-color: #dcd2e6;
+  width: calc(25% - 5px);
+  box-shadow: 0 0 0 5px #fff;
+  text-align: center;
+  font-size: 50px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card img {
+  height: 100%;
+  transform: scale(0.6);
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(1) {
+  left: 38%;
+  z-index: 2;
+  transform: rotateX(50deg) rotateY(-90deg) perspective(1100px) skew(-15deg, -15deg);
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(1) img {
+  position: absolute;
+  left: -150%;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(2) {
+  transform: rotateX(50deg) rotateY(90deg) perspective(1100px) skew(-15deg, 15deg);
+  left: 13%;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(2) img {
+  position: absolute;
+  left: -260%;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(3) {
+  transform: rotateX(50deg) rotateY(-90deg) perspective(1100px) skew(-15deg, -15deg);
+  right: 12%;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(3) img {
+  position: absolute;
+  left: -370%;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(4) {
+  transform: rotateX(50deg) rotateY(90deg) perspective(1100px) skew(-15deg, 15deg);
+  right: 37%;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .card:nth-child(4) img {
+  position: absolute;
+  left: -485%;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .map-1 {
+  left: 10px;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .here {
+  width: 45px;
+  height: 70px;
+  position: relative;
+  right: 290px;
+  top: 88px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.landing-page .bg-travel-guide .travel-guide-map .here img:nth-child(2) {
+  position: relative;
+  right: 45px;
+  bottom: 61px;
+}
+
+.landing-page .bg-service {
+  background-color: #2d2d2d;
+}
+
+.landing-page .bg-service .service-blocks {
+  display: flex;
+}
+
+.landing-page .bg-service .service-blocks .service-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 33.3%;
+}
+
+.landing-page .bg-service .service-blocks .service-block img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+.landing-page .bg-service .service-blocks .service-block .h2 {
+  color: #ffffff;
+  font-family: "Nexa - Book";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 22px;
+  /* Text style for "S, ave Tim" */
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+}
+
+.landing-page .bg-service .service-blocks .service-block .describe {
+  color: #ffffff;
+  font-family: "Arial MT";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  /* Text style for "Lets throw" */
+  letter-spacing: 0.3px;
+  padding: 0 15px 50px 15px;
+}
+
+.landing-page .bg-service .service-blocks .service-block:nth-child(1)::after, .landing-page .bg-service .service-blocks .service-block:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 3px;
+  background-color: #6d6d6d;
+  left: 78%;
+  top: 35px;
+}
+
+.landing-page .bg-sub-servive {
+  padding-top: 50px;
+  background-color: #222222;
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.landing-page .bg-sub-servive .sub-service img {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.landing-page .bg-sub-servive .sub-service .sub-services-text {
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.landing-page .bg-sub-servive .sub-service .sub-services-text .h2 {
+  text-shadow: 0 1px 1px #000000;
+  color: #ffffff;
+  font-family: "Nexa - Book";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 22px;
+  /* Text style for "A,  simple" */
+  letter-spacing: 0.9px;
+  margin-bottom: 25px;
+}
+
+.landing-page .bg-sub-servive .sub-service .sub-services-text .h5 {
+  text-shadow: 0 1px 1px #000000;
+  color: #a161db;
+  font-family: Nexa;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  /* Text style for "W, e start" */
+  letter-spacing: 0.35px;
+}
+
+.landing-page .main-focus {
+  color: #a161db;
+}
+
+.landing-page .container {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.landing-page .mp {
+  padding: 50px 0;
+}
+
+.landing-page .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page .col {
+  flex-direction: column;
+}
+/*# sourceMappingURL=main.css.map */
