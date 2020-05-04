@@ -106,6 +106,7 @@ function animateMap() {
 }
 let scroll = 0;
 $(window).on('scroll', function () {
+    adaptive();
     $('.bg-slider-bg').css({
         'top': `${window.pageYOffset/2}px`
     })
@@ -158,3 +159,73 @@ $('.travel-guide-map').click(function (e) {
         animateMap()
     }
 });
+
+let widthContainer = window.innerWidth;
+$(window).on('resize', function () {
+    adaptive()
+});
+
+$(window).on('load', function () {
+    adaptive()
+});
+
+
+function adaptive() {
+    if (window.innerWidth < 1010) {
+        $('.container').css({
+            width: `100%`
+        })
+        $('.navbar').css({
+            'flex-wrap': 'wrap',
+            'left': '0px'
+        })
+        $('.logo-search').css({
+            'align-items': 'center',
+            'flex-direction': 'column'
+        })
+
+    } else if (window.innerWidth >= 1010) {
+        $('.container').css({
+            width: `950px`
+        })
+        $('.navbar').css({
+            'flex-wrap': 'nowrap'
+        });
+        $('.logo-search').css({
+            'align-items': 'center',
+            'flex-direction': 'row'
+        })
+    }
+
+    if (window.innerWidth < 820) {
+        $('.service-blocks').css({
+            'flex-direction': 'column'
+        });
+
+        $('.bg-travel-guide h1').css({
+            'text-align': 'center',
+            'line-height': '35px'
+        });
+        console.log($('.service-block:nth-child(2)::after'));
+
+    } else if (window.innerWidth >= 820) {
+        $('.service-blocks').css({
+            'flex-direction': 'row'
+        });
+    }
+
+    if (window.innerWidth < 610) {
+        console.log($('.search-logo::after'));
+        
+        $('.search').css({
+            'flex-direction': 'column'
+        });
+        $('.search-logo:after').css({
+            display: 'none'
+        });
+    } else if (window.innerWidth >= 610) {
+        $('.search').css({
+            'flex-direction': 'row'
+        });
+    }
+}

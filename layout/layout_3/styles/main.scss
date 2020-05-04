@@ -101,6 +101,7 @@
                                 font-weight: 700;
                                 color: #58159b;
                                 letter-spacing: 0.12px;
+                                
                             }
                         }
 
@@ -141,10 +142,10 @@
             .navbar {
                 width: 100%;
                 display: flex;
+                justify-content: center;
                 list-style-type: none;
                 position: relative;
                 top: 20px;
-                left: -20px;
 
                 .navbar-li {
                     width: 165px;
@@ -359,17 +360,6 @@
                     /* Text style for "Lets throw" */
                     letter-spacing: 0.3px;
                     padding: 0 15px 50px 15px;
-                }
-
-                &:nth-child(1)::after,
-                &:nth-child(2)::after {
-                    content: '';
-                    position: absolute;
-                    width: 140px;
-                    height: 3px;
-                    background-color: #6d6d6d;
-                    left: 78%;
-                    top: 35px;
                 }
             }
         }

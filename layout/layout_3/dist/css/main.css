@@ -193,10 +193,10 @@ h6 {
 .landing-page .bg-navbar .nav .navbar {
   width: 100%;
   display: flex;
+  justify-content: center;
   list-style-type: none;
   position: relative;
   top: 20px;
-  left: -20px;
 }
 
 .landing-page .bg-navbar .nav .navbar .navbar-li {
@@ -404,16 +404,6 @@ h6 {
   /* Text style for "Lets throw" */
   letter-spacing: 0.3px;
   padding: 0 15px 50px 15px;
-}
-
-.landing-page .bg-service .service-blocks .service-block:nth-child(1)::after, .landing-page .bg-service .service-blocks .service-block:nth-child(2)::after {
-  content: '';
-  position: absolute;
-  width: 140px;
-  height: 3px;
-  background-color: #6d6d6d;
-  left: 78%;
-  top: 35px;
 }
 
 .landing-page .bg-sub-servive {
