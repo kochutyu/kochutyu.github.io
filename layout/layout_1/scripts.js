@@ -1,78 +1,47 @@
 $(window).on('resize', function () {
-    checkWidthWindow();
+    window.location.reload()
+    // checkWidthWindow();
 });
 
-$(window).on('load', function () {
-    $('.section_up').css({
-        height: '0px',
-        overflow: 'hidden'
-    });
-    $('.text_nav').animate({
-        position: 'relative',
-        left: '-1000px',
-    }, 500);
-
-    $('.phone_nav').animate({
-        position: 'relative',
-        right: "-1000px"
-    }, 700)
-    setTimeout(function () {
-        $('.text_nav').animate({
-            left: "0px",
-        }, 1000, function () {
-            // Animation complete.
-            $('.phone_nav').animate({
-                right: "280px",
-            }, 1000, function () {
-                // Animation complete.
-                $('.phone_nav img:nth-child(1)').animate({
-                    left: "100px",
-                }, 1000, function () {
-                    // Animation complete.
-                });
-            });
-        });
-    }, 500);
-});
 
 function notMobile() {
+    $(window).on('load', function () {
+        $('.section_up').css({
+            height: '0px',
+            overflow: 'hidden'
+        });
+        $('.text_nav').animate({
+            position: 'relative',
+            left: '-1000px',
+        }, 500);
+
+        $('.phone_nav').animate({
+            position: 'relative',
+            right: "-1000px"
+        }, 700)
+        setTimeout(function () {
+            $('.text_nav').animate({
+                left: "0px",
+            }, 1000, function () {
+                // Animation complete.
+                $('.phone_nav').animate({
+                    right: "280px",
+                }, 1000, function () {
+                    // Animation complete.
+                    $('.phone_nav img:nth-child(1)').animate({
+                        left: "100px",
+                    }, 1000, function () {
+                        // Animation complete.
+                    });
+                });
+            });
+        }, 500);
+    });
     $(window).scroll(function () {
 
         const scroll = window.pageYOffset;
         console.log(scroll);
 
-        $(window).on('load', function () {
-            $('.section_up').css({
-                height: '0px',
-                overflow: 'hidden'
-            });
-            $('.text_nav').animate({
-                position: 'relative',
-                left: '-1000px',
-            }, 500);
-
-            $('.phone_nav').animate({
-                position: 'relative',
-                right: "-1000px"
-            }, 700)
-            setTimeout(function () {
-                $('.text_nav').animate({
-                    left: "0px",
-                }, 1000, function () {
-                    // Animation complete.
-                    $('.phone_nav').animate({
-                        right: "280px",
-                    }, 1000, function () {
-                        // Animation complete.
-                        $('.phone_nav img:nth-child(1)').animate({
-                            left: "100px",
-                        }, 1000, function () {
-                            // Animation complete.
-                        });
-                    });
-                });
-            }, 500);
-        });
 
         if (scroll >= 134) {
 
@@ -163,15 +132,7 @@ function notMobile() {
             }, 1000)
         }
 
-        if (window.clientWidth) {
-
-        }
     });
-}
-
-
-function resetStyleForNotMobile() {
-    onloadForNotMobile();
 }
 
 function mobile() {
