@@ -37,6 +37,11 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .container {
     width: 960px;
     margin: 0 auto;
@@ -46,7 +51,7 @@ header {
     height: 850px;
     background-image: url(img/bg.png);
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -135,6 +140,7 @@ header {
 .text_nav {
     position: relative;
     top: -310px;
+    left: -1000px;
     width: 500px;
 }
 
@@ -165,7 +171,7 @@ header {
 .phone_nav {
     position: relative;
     top: -415px;
-    right: 230px;
+    right: -1000px;
 }
 
 .phone_nav img:nth-child(1) {
@@ -201,13 +207,37 @@ header {
 .figure_flex {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     /* flex-wrap: wrap; */
+}
+
+.Updates1,
+.Updates2,
+.Updates3 {
+    position: relative;
+    left: 1000px;
+}
+
+.Updates4 {
+    position: relative;
+    bottom: -500px;
 }
 
 .figure_main_block_1 {
     width: 30%;
     display: flex;
     margin: 80px 0;
+}
+
+.figure_main_block_1:nth-child(1),
+.figure_main_block_1:nth-child(3) {
+    position: relative;
+    top: -300px;
+}
+
+.figure_main_block_1:nth-child(2) {
+    position: relative;
+    top: 300px;
 }
 
 .for_icon {
@@ -290,6 +320,11 @@ h1 {
     width: 45%;
 }
 
+.PingbulLer {
+    position: relative;
+    top: -500px;
+}
+
 .flex {
     display: flex;
     justify-content: space-between;
@@ -298,6 +333,8 @@ h1 {
 .Updates h1 {
     margin-top: 15px;
     margin-bottom: 20px;
+    position: relative;
+    top: -500px;
 }
 
 .Updates a {
@@ -420,6 +457,10 @@ h1 {
     margin-top: 25px;
     margin-bottom: 30px;
     background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    left: -2000px;
 }
 
 .parthner_sprite_1 {
@@ -461,6 +502,23 @@ h1 {
     background-position: 79px 65px;
     width: 79px;
     height: 64px;
+}
+.partners_block{
+    position: relative;
+    top: -100px;
+}
+.pigest{
+    overflow: hidden;
+}
+.pig1,
+.pig3{
+    position: relative;
+    top: -500px;
+}
+
+.pig2{
+    position: relative;
+    top: 500px;
 }
 
 .hr_2 {
