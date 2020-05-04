@@ -33,6 +33,12 @@ for (const li of navbarLi) {
     }
 }
 
+function paralax() {
+    $('.bg-slider-bg').css({
+        'top': `${window.pageYOffset/2}px`
+    })
+}
+
 //! bg-travel-guide
 
 //* MAP ANUMATION
@@ -100,6 +106,9 @@ function animateMap() {
 }
 let scroll = 0;
 $(window).on('scroll', function () {
+    $('.bg-slider-bg').css({
+        'top': `${window.pageYOffset/2}px`
+    })
     console.log(document.documentElement.clientHeight);
     const clientHeightMin = document.documentElement.clientHeight / 2;
     if (window.pageYOffset < 200) {
@@ -125,6 +134,8 @@ $(window).on('scroll', function () {
         });
         animateMap()
     }
+
+    paralax()
 });
 $('.travel-guide-map').click(function (e) {
     if (!checkClick) {

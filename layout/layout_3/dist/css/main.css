@@ -258,6 +258,11 @@ h6 {
 }
 
 .landing-page .bg-slider {
+  overflow: hidden;
+}
+
+.landing-page .bg-slider .bg-slider-bg {
+  position: relative;
   height: calc(100vh - 230px);
   width: 100%;
   background-image: url(../../img/header/Slider.png);

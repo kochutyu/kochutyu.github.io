@@ -216,11 +216,15 @@
     }
 
     .bg-slider {
-        height: calc(100vh - 230px);
-        width: 100%;
-        background-image: url(../../img/header/Slider.png);
-        background-size: cover;
-        background-position: center;
+        overflow: hidden;
+        .bg-slider-bg {
+            position: relative;
+            height: calc(100vh - 230px);
+            width: 100%;
+            background-image: url(../../img/header/Slider.png);
+            background-size: cover;
+            background-position: center;
+        }
     }
 
     .bg-travel-guide {
