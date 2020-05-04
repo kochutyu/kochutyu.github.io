@@ -138,7 +138,7 @@ $(window).on('scroll', function () {
 
     paralax()
 });
-$('.travel-guide-map').click(function (e) {
+$('.map1, .map2, .map3, .map4').click(function (e) {
     if (!checkClick) {
         checkClick = true;
         $('.map-1').css({
@@ -166,7 +166,6 @@ $(window).on('resize', function () {
 });
 
 $(window).on('load', function () {
-    alert('msg');
     adaptive()
 });
 

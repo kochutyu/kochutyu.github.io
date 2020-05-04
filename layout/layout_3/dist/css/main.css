@@ -414,6 +414,10 @@ h6 {
   overflow: hidden;
 }
 
+.landing-page .bg-sub-servive .sub-service {
+  height: 550px;
+}
+
 .landing-page .bg-sub-servive .sub-service img {
   position: absolute;
   top: 50px;
@@ -426,6 +430,7 @@ h6 {
   top: 330px;
   left: 50%;
   text-align: center;
+  word-wrap: break-word;
   transform: translate(-50%, 0);
 }
 
@@ -435,7 +440,7 @@ h6 {
   font-family: "Nexa - Book";
   font-size: 36px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 30px;
   /* Text style for "A,  simple" */
   letter-spacing: 0.9px;
   margin-bottom: 25px;
@@ -450,6 +455,10 @@ h6 {
   line-height: 22px;
   /* Text style for "W, e start" */
   letter-spacing: 0.35px;
+}
+
+.landing-page body {
+  overflow: hidden;
 }
 
 .landing-page .main-focus {
