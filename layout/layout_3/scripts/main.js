@@ -166,6 +166,7 @@ $(window).on('resize', function () {
 });
 
 $(window).on('load', function () {
+    alert('msg');
     adaptive()
 });
 
