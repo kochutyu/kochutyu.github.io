@@ -102,6 +102,8 @@ h6 {
 .landing-page .bg-navbar .nav .logo-search .search .search-logo {
   display: flex;
   align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .landing-page .bg-navbar .nav .logo-search .search .search-logo .logo-text {
@@ -119,17 +121,6 @@ h6 {
 .landing-page .bg-navbar .nav .logo-search .search .search-logo img {
   height: 12px;
   width: 8px;
-}
-
-.landing-page .bg-navbar .nav .logo-search .search .search-logo::after {
-  content: '';
-  width: 1px;
-  height: 25px;
-  box-shadow: 0 1px 0 #ffffff;
-  background-color: #c7c7c7;
-  background-color: #767676;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
 .landing-page .bg-navbar .nav .logo-search .search .select {

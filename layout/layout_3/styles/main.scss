@@ -46,6 +46,8 @@
                     .search-logo {
                         display: flex;
                         align-items: center;
+                        margin-left: 15px;
+                        margin-right: 15px;
 
                         .logo-text {
                             text-shadow: 0 1px 0 #ffffff;
@@ -64,16 +66,16 @@
                             width: 8px;
                         }
 
-                        &::after {
-                            content: '';
-                            width: 1px;
-                            height: 25px;
-                            box-shadow: 0 1px 0 #ffffff;
-                            background-color: #c7c7c7;
-                            background-color: #767676;
-                            margin-left: 15px;
-                            margin-right: 15px;
-                        }
+                        // &::after {
+                        //     content: '';
+                        //     width: 1px;
+                        //     height: 25px;
+                        //     box-shadow: 0 1px 0 #ffffff;
+                        //     background-color: #c7c7c7;
+                        //     background-color: #767676;
+                        //     margin-left: 15px;
+                        //     margin-right: 15px;
+                        // }
                     }
 
                     .select {
@@ -101,7 +103,7 @@
                                 font-weight: 700;
                                 color: #58159b;
                                 letter-spacing: 0.12px;
-                                
+
                             }
                         }
 
@@ -218,6 +220,7 @@
 
     .bg-slider {
         overflow: hidden;
+
         .bg-slider-bg {
             position: relative;
             height: calc(100vh - 230px);
@@ -374,6 +377,7 @@
 
         .sub-service {
             height: 550px;
+
             img {
                 position: absolute;
                 top: 50px;
@@ -422,9 +426,10 @@
     //! ------------------------------------------------------------------------------------------------------------------------------
     //!                                                  STYLES SETTINGS
     //! ------------------------------------------------------------------------------------------------------------------------------
-    body{
+    body {
         overflow: hidden;
     }
+
     //? COLOR
     .main-focus {
         color: #a161db;
@@ -436,7 +441,7 @@
         margin: 0 auto;
     }
 
-    .overflow{
+    .overflow {
         overflow: hidden;
     }
 
@@ -504,9 +509,7 @@ only screen and (min-device-pixel-ratio : 1.5) {}
 
 
 @media only screen and (max-width : 320px) {
-    .search-logo::after{
+    .search-logo::after {
         content: none;
     }
 }
-
-

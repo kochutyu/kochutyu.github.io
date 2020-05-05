@@ -97,9 +97,11 @@ function animateMap() {
             'height': '400px',
             'transform': 'rotateX(70deg) rotateY(0deg) perspective(1100px) skew(-15deg, -30deg)'
         }, 1000, 'linear')
-        $('.here').animate({
-            'opacity': 1,
-        }, 1000, 'linear')
+        if (window.innerWidth >= 1010) {
+            $('.here').animate({
+                'opacity': 1,
+            }, 1000, 'linear')
+        }
     }
     console.log(checkClick);
 
@@ -138,7 +140,7 @@ $(window).on('scroll', function () {
 
     paralax()
 });
-$('.map1, .map2, .map3, .map4').click(function (e) {
+$('.map-1, .map-2, .map-3, .map-4').click(function (e) {
     if (!checkClick) {
         checkClick = true;
         $('.map-1').css({
@@ -196,6 +198,9 @@ function adaptive() {
         $('.logo-search').css({
             'align-items': 'center',
             'flex-direction': 'row'
+        })
+        $('.here').css({
+            opacity: `1`
         })
     }
 
@@ -260,6 +265,9 @@ function getImgMap() {
         scale = 0.6;
         deltaWidth = 0;
     }
+    $('.here').css({
+        opacity: `0`
+    })
     $('.card img').css({
         transform: `scale(${scale})`
     })
