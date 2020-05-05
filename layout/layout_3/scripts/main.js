@@ -162,10 +162,12 @@ $('.map1, .map2, .map3, .map4').click(function (e) {
 
 let widthContainer = window.innerWidth;
 $(window).on('resize', function () {
+    getImgMap()
     adaptive()
 });
 
 $(window).on('load', function () {
+    getImgMap()
     adaptive()
 });
 
@@ -216,7 +218,7 @@ function adaptive() {
 
     if (window.innerWidth < 610) {
         console.log($('.search-logo::after'));
-        
+
         $('.search').css({
             'flex-direction': 'column'
         });
@@ -228,4 +230,53 @@ function adaptive() {
             'flex-direction': 'row'
         });
     }
+}
+
+let preveousWindowWidth = window.innerWidth;
+
+let scale = 0;
+let scaleCoef = 0;
+const startWindowWidth = window.innerWidth;
+let deltaWidth = 0;
+function getImgMap() {
+    console.log('---------------------------------------------');
+    
+    console.log('preveousWindowWidth', preveousWindowWidth);
+    console.log('window.innerWidth', window.innerWidth);
+    
+    if (window.innerWidth<1010) {
+        scale = ((window.innerWidth * 0.5) / 840).toFixed(2);
+        if (preveousWindowWidth < window.innerWidth) {
+            deltaWidth -= 1;
+        } else {
+            if (deltaWidth <= 0) {
+                
+                deltaWidth += 1;
+            } else {
+                deltaWidth = 0;
+            }
+        }
+    } else {
+        scale = 0.6;
+        deltaWidth = 0;
+    }
+    $('.card img').css({
+        transform: `scale(${scale})`
+    })
+    $('.map-1 img').css({
+        left: `-${360 + deltaWidth}px`
+    })
+    $('.map-2 img').css({
+        left: `-${600 + deltaWidth}px`
+    })
+    $('.map-3 img').css({
+        left: `-${900 + deltaWidth}px`
+    })
+    $('.map-4 img').css({
+        left: `-${1200 + deltaWidth}px`
+    })
+    preveousWindowWidth = window.innerWidth;
+    console.log(deltaWidth);
+    
+
 }

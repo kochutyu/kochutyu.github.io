@@ -470,6 +470,10 @@ h6 {
   margin: 0 auto;
 }
 
+.landing-page .overflow {
+  overflow: hidden;
+}
+
 .landing-page .mp {
   padding: 50px 0;
 }
@@ -482,5 +486,11 @@ h6 {
 
 .landing-page .col {
   flex-direction: column;
+}
+
+@media only screen and (max-width: 320px) {
+  .search-logo::after {
+    content: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
