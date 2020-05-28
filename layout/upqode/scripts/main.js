@@ -261,6 +261,163 @@ var initMap = function initMap() {
 };
 "use strict";
 
+//! ----------------------------------------------------------------------
+//! CODE
+//! ----------------------------------------------------------------------
+gsap.to("#service_point_oval_1", {
+  duration: 0.5,
+  repeatDelay: 0.001,
+  repeat: -1,
+  opacity: 0,
+  fill: '#00A031'
+}); //percents
+
+gsap.to("#service_point_oval_2", {
+  duration: 0.5,
+  repeatDelay: 0.004,
+  repeat: -1,
+  opacity: 0,
+  fill: '#00A031'
+}); //percents
+
+gsap.to("#service_point_oval_3", {
+  duration: 0.5,
+  repeatDelay: 0.007,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_4", {
+  duration: 0.5,
+  repeatDelay: 0.010,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_5", {
+  duration: 0.5,
+  repeatDelay: 0.013,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_6", {
+  duration: 0.5,
+  repeatDelay: 0.017,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_7", {
+  duration: 0.5,
+  repeatDelay: 0.02,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_8", {
+  duration: 0.5,
+  repeatDelay: 0.023,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_9", {
+  duration: 0.5,
+  repeatDelay: 0.027,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_10", {
+  duration: 0.5,
+  repeatDelay: 0.030,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_11", {
+  duration: 0.5,
+  repeatDelay: 0.033,
+  repeat: -1,
+  opacity: 0
+}); //percents
+
+gsap.to("#service_point_oval_12", {
+  duration: 0.5,
+  repeatDelay: 0.037,
+  repeat: -1,
+  opacity: 0
+}); //percents
+"use strict";
+
+//! ----------------------------------------------------------------------
+//! WINDOW EVENT
+//! ----------------------------------------------------------------------
+window.addEventListener('scroll', function () {
+  // SCROLL
+  // CALL FUNCTION
+  animateRoad(); // assignScrollForAnimatePoint()
+});
+window.addEventListener('load', function () {
+  // LOAD
+  // GET SOME INFO
+  previousScroll = window.pageYOffset; // CALL FUNCTION
+
+  animateRoad();
+}); //! ----------------------------------------------------------------------
+//! CODE
+//! ----------------------------------------------------------------------
+
+var sizeRoadInPX = 1216;
+var road = document.getElementById('service_road');
+var point = document.getElementById('service_point');
+var previousScroll = window.pageYOffset;
+var durationForAnimateOfPoint = 3;
+gsap.registerPlugin(MotionPathPlugin);
+var tween = gsap.to("#service_point", {
+  // TWEEN SETTINGS
+  duration: 3,
+  repeat: 0,
+  repeatDelay: 10,
+  yoyo: true,
+  startAt: -200,
+  reversed: false,
+  ease: "power1.inOut",
+  motionPath: {
+    path: "#service_road",
+    align: "#service_road",
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  }
+}).pause();
+
+var animateRoad = function animateRoad() {
+  var newScrollTop = window.pageYOffset;
+  var positionRoadBottom = road.getBoundingClientRect().bottom;
+  var positionRoadTop = road.getBoundingClientRect().top;
+
+  if (positionRoadBottom > 0 && positionRoadTop < 700) {
+    // GET POSITION FOR START AND FINISH ROAD SVG 
+    if (previousScroll < newScrollTop) {
+      // SCROLLED DOWN
+      tween.play();
+      setTimeout(function () {
+        tween.pause();
+      }, 50);
+    } else {
+      // SCROLLED UP
+      tween.reverse();
+      setTimeout(function () {
+        tween.pause();
+      }, 50);
+    }
+  }
+
+  previousScroll = newScrollTop;
+};
+"use strict";
+
 var selectLi = undefined;
 var savedHash = undefined;
 var home = document.getElementById('home-nav'); //! ----------------------------------------------------------------------
@@ -465,7 +622,6 @@ var navigateURL = function navigateURL() {
       var a = nav[i].children[0].textContent.toLocaleLowerCase();
 
       if (a.includes(locationHash)) {
-        // console.log(a);
         navigateByURL = false;
         nav[i].classList.add('list__li_active');
         navigateByURL = true;
@@ -564,162 +720,4 @@ function workWithHeader(section) {
       break;
   }
 }
-"use strict";
-
-//! ----------------------------------------------------------------------
-//! CODE
-//! ----------------------------------------------------------------------
-gsap.to("#service_point_oval_1", {
-  duration: 0.5,
-  repeatDelay: 0.001,
-  repeat: -1,
-  opacity: 0,
-  fill: '#00A031'
-}); //percents
-
-gsap.to("#service_point_oval_2", {
-  duration: 0.5,
-  repeatDelay: 0.004,
-  repeat: -1,
-  opacity: 0,
-  fill: '#00A031'
-}); //percents
-
-gsap.to("#service_point_oval_3", {
-  duration: 0.5,
-  repeatDelay: 0.007,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_4", {
-  duration: 0.5,
-  repeatDelay: 0.010,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_5", {
-  duration: 0.5,
-  repeatDelay: 0.013,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_6", {
-  duration: 0.5,
-  repeatDelay: 0.017,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_7", {
-  duration: 0.5,
-  repeatDelay: 0.02,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_8", {
-  duration: 0.5,
-  repeatDelay: 0.023,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_9", {
-  duration: 0.5,
-  repeatDelay: 0.027,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_10", {
-  duration: 0.5,
-  repeatDelay: 0.030,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_11", {
-  duration: 0.5,
-  repeatDelay: 0.033,
-  repeat: -1,
-  opacity: 0
-}); //percents
-
-gsap.to("#service_point_oval_12", {
-  duration: 0.5,
-  repeatDelay: 0.037,
-  repeat: -1,
-  opacity: 0
-}); //percents
-"use strict";
-
-//! ----------------------------------------------------------------------
-//! WINDOW EVENT
-//! ----------------------------------------------------------------------
-window.addEventListener('scroll', function () {
-  // SCROLL
-  // CALL FUNCTION
-  animateRoad(); // assignScrollForAnimatePoint()
-});
-window.addEventListener('load', function () {
-  // LOAD
-  // GET SOME INFO
-  previousScroll = window.pageYOffset; // CALL FUNCTION
-
-  animateRoad();
-}); //! ----------------------------------------------------------------------
-//! CODE
-//! ----------------------------------------------------------------------
-
-var sizeRoadInPX = 1216;
-var road = document.getElementById('service_road');
-var point = document.getElementById('service_point');
-var previousScroll = window.pageYOffset;
-var durationForAnimateOfPoint = 3;
-gsap.registerPlugin(MotionPathPlugin);
-var tween = gsap.to("#service_point", {
-  // TWEEN SETTINGS
-  duration: 3,
-  repeat: 0,
-  repeatDelay: 10,
-  yoyo: true,
-  startAt: -200,
-  reversed: false,
-  ease: "power1.inOut",
-  motionPath: {
-    path: "#service_road",
-    align: "#service_road",
-    autoRotate: true,
-    alignOrigin: [0.5, 0.5]
-  }
-}).pause();
-
-var animateRoad = function animateRoad() {
-  var newScrollTop = window.pageYOffset;
-  var positionRoadBottom = road.getBoundingClientRect().bottom;
-  var positionRoadTop = road.getBoundingClientRect().top;
-  console.log(positionRoadTop);
-
-  if (positionRoadBottom > 0 && positionRoadTop < 700) {
-    // GET POSITION FOR START AND FINISH ROAD SVG 
-    if (previousScroll < newScrollTop) {
-      // SCROLLED DOWN
-      tween.play();
-      setTimeout(function () {
-        tween.pause();
-      }, 50);
-    } else {
-      // SCROLLED UP
-      tween.reverse();
-      setTimeout(function () {
-        tween.pause();
-      }, 50);
-    }
-  }
-
-  previousScroll = newScrollTop;
-};
 //# sourceMappingURL=main.js.map
